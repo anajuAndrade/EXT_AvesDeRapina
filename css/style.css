@@ -116,7 +116,7 @@
 
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
-    color: var(--cinzaclaro); 
+    color: var(--cinzamedio); 
 }
 
 
@@ -175,6 +175,13 @@
     background-size: cover;
     background-position: center center;
     padding: 50px 0px 50px 0px;
+  }
+  .about-main-content-header {
+    margin-top: 0px;
+    background-image: url(../img/header.jpg);
+    padding: 150px 0px 150px 0px;
+    text-align: center;
+    color: var(--cinzaclaro);
   }
   .blur-bg {
   width: 100%;
@@ -315,6 +322,7 @@
     border-radius: 15px; /* Bordas arredondadas */
     transition: transform 0.3s ease;
 }
+
 
 .carouselimg img:hover {
     transform: scale(1.05); /* Efeito de movimento ao passar o mouse */
@@ -808,10 +816,65 @@
   .amazing-deals ul.page-numbers li.active a,
   .amazing-deals ul.page-numbers li a:hover {
     background-color: #3d3c3b;
-    color: #fff;
+    color:#fff;
   }
   
   .amazing-deals ul.page-numbers li:first-child a,
   .amazing-deals ul.page-numbers li:last-child a {
     border: none;
   }
+
+  .mb-2{
+    color: var(--cinzaescuro);
+  }
+
+  .contact-box {
+    width: 100%;
+    max-width: 300px; /* Defina a largura máxima do quadrado */
+    background-color: #f8f9fa;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para dar destaque */
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.contact-box i {
+    color: var(--cinzaescuro) !important;
+}
+
+.contact .row.g-5 {
+    justify-content: space-between;
+}
+
+/* .contact-box a {
+    color: var(--cinzaescuro); 
+    text-decoration: none; 
+}
+
+.contact-box a:hover {
+    color: var(--cinzame); 
+    text-decoration: underline; 
+    font-weight: bold;
+} */
+
+/* Estilo para os campos de entrada de texto (nome, email, etc.) */
+.form-floating .form-control {
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 0.75rem 1rem; /* Padding para dar espaçamento */
+}
+
+
+.form-floating select.form-control {
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 0.75rem 1rem; /* Padding para dar espaçamento */
+}
+
+.regiao {
+    width: 100%; 
+}
+
+
