@@ -139,3 +139,15 @@
     
 })(jQuery);
 
+function filterElements(categoria) {
+    const elements = document.querySelectorAll(".elemento");
+
+    elements.forEach((element) => {
+        element.classList.remove("show");
+        if ((categoria === "Todos") || element.classList.contains(categoria)) {
+            element.classList.add("show");
+        }
+    });
+}
+
+filterElements('Todos');

@@ -84,7 +84,6 @@
     font-weight: normal;
 }
 
-
 /*** Navbar ***/
 .sticky-top {
     position: sticky;
@@ -276,7 +275,7 @@
 .about-main-content-header {
     margin-top: 0px;
     background-image: url(../img/header.jpg);
-    padding: 150px 0px 150px 0px;
+    padding: 150px 0px 150px 1150px;
     text-align: center;
     color: var(--cinzaclaro);
 }
@@ -342,7 +341,7 @@
 
 .about-main-content .content .main-button a {
     background-color: #fff;
-    color: #3d3c3b;
+    color: var(--cinzaescuro);
     border-color: #fff;
 }
 
@@ -425,7 +424,6 @@
 
 .carouselimg img:hover {
     transform: scale(1.05);
-    /* Efeito de movimento ao passar o mouse */
 }
 
 /* legenda das fotos */
@@ -462,6 +460,31 @@
     color: var(--cinzamedio)
 }
 
+/* Filtro */
+.elemento{
+    display: none;
+}
+
+.show{
+    display:block;
+}
+
+.btnFiltro {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--cinzaescuro);
+    color: var(--cinzaclaro);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btnFiltro:hover {
+    background-color: var(--cinzamedio);
+    transform: scale(1.05);
+}
 
 /* .page-header {
     background: linear-gradient(rgba(136, 180, 78, .7), rgba(136, 180, 78, .7)), url(../img/carousel-1.jpg) center center no-repeat;
@@ -516,7 +539,6 @@
     left: calc(50% - 13px);
 }
 
-
 /*** Products ***/
 .product {
     background: linear-gradient(rgba(136, 180, 78, .1), rgba(136, 180, 78, .1)), left bottom no-repeat;
@@ -544,8 +566,6 @@
     font-size: 25px;
     transition: .5s;
 }
-
-
 
 /*** About ***/
 .video {
@@ -747,8 +767,6 @@
     color: #FFFFFF;
 }
 
-
-/* Alinha os elementos filhos ao centro */
 .container {
     display: flex;
     flex-direction: column;
@@ -887,7 +905,7 @@
 }
 
 .amazing-deals {
-    margin-top: 120px;
+    margin-top: 30px;
 }
 
 .amazing-deals .item .image {
