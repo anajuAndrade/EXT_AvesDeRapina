@@ -279,6 +279,13 @@
     text-align: center;
     color: var(--cinzaclaro);
 }
+.contentSobre{
+    margin-top: 0px;
+    background-image: url(../img/aveSobreNos.jpg);
+    padding: 150px 0px 150px 1150px;
+    text-align: center;
+    color: var(--cinzaclaro);
+}
 
 .blur-bg {
     width: 100%;
