@@ -81,52 +81,8 @@
                 items:3
             }
         }
-    });
+    });    
 
-    var animationStarted = false;
-
-    window.addEventListener('scroll', function() {
-        var element = document.querySelector('.estatistica');
-        var position = element.getBoundingClientRect();
-    
-        // Se a parte relevante da página estiver visível e a animação ainda não foi iniciada
-        if (position.top < window.innerHeight && position.bottom >= 0 && !animationStarted) {
-            // Iniciar a animação
-            animateValue("years", 0, 7, 2000); // Ajuste o terceiro parâmetro para uma duração maior
-            animateValue("families", 0, 118, 2000); // Deixe a duração padrão para o segundo
-            animateValue("partners", 0, 20, 2000); // Ajuste o terceiro parâmetro para uma duração maior
-    
-            // Definir a variável de controle como true para evitar reiniciar a animação
-            animationStarted = true;
-        }
-    });
-    
-    function animateValue(id, start, end, duration) {
-        var obj = document.getElementById(id);
-        var range = end - start;
-        var current = start;
-        var startTime = null;
-    
-        function updateNumber(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var progress = timestamp - startTime;
-            var increment = Math.ceil((range * progress) / duration);
-            current = start + increment;
-    
-            obj.innerHTML = "<span class='plus-sign'>+</span>" + current;
-    
-            if (progress < duration) {
-                requestAnimationFrame(updateNumber);
-            } else {
-                obj.innerHTML = "<span class='plus-sign'>+</span>" + end;
-            }
-        }
-    
-        requestAnimationFrame(updateNumber);
-    }
-    
-    
-  
     // Testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -151,3 +107,37 @@ function filterElements(categoria) {
 }
 
 filterElements('Todos');
+
+// Verifique se o formulário está presente na página antes de adicionar o evento
+document.addEventListener("DOMContentLoaded", () => {
+    const voluntarioForm = document.querySelector('.voluntario-form');
+    
+    if (voluntarioForm) {
+        voluntarioForm.addEventListener('submit', function(event) {
+            var form = event.target;
+            var valid = true;
+
+            form.querySelectorAll('input[required], select[required]').forEach(function(input) {
+                if (!input.value) {
+                    valid = false;
+                    input.classList.add('is-invalid');
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+
+            if (!valid) {
+                event.preventDefault();
+                alert('Por favor, preencha todos os campos obrigatórios.');
+            } else {
+                alert('Formulário enviado com sucesso! Assim que surgir uma possibilidade, entraremos em contato.');
+            }
+        });
+    } else {
+        console.info("Nenhum formulário '.voluntario-form' encontrado nesta página.");
+    }
+});
+
+
+
+    
