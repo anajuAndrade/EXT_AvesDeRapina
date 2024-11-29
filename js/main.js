@@ -40,20 +40,6 @@
     });
 
 
-    // Modal Video
-    var $videoSrc;
-    $('.btn-play').click(function () {
-        $videoSrc = $(this).data("src");
-    });
-    console.log($videoSrc);
-    $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    })
-    $('#videoModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc);
-    })
-
-
     // Product carousel
     $(".product-carousel").owlCarousel({
         autoplay: true,
@@ -99,12 +85,15 @@ function filterElements(categoria) {
     const elements = document.querySelectorAll(".elemento");
 
     elements.forEach((element) => {
-        element.classList.remove("show");
-        if ((categoria === "Todos") || element.classList.contains(categoria)) {
-            element.classList.add("show");
+        if (categoria === "Todos" || element.classList.contains(categoria)) {
+            element.style.display = "flex"; // Torna visível (ajustado para flex se necessário)
+        } else {
+            element.style.display = "none"; // Oculta o elemento
         }
     });
 }
+
+
 
 filterElements('Todos');
 
