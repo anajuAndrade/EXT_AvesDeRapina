@@ -846,3 +846,17 @@
     text-align: left !important;
     margin-left: 0;
 }
+
+/* comunidade */
+.contactComunidade{
+    text-align: justify !important;
+    text-align: left !important;
+    margin-left: 8%;
+    margin-right:8%;
+    padding: 3%;
+}
+
+.post{
+    border-color: #252525;
+    padding: 1%;
+}

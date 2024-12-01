@@ -127,6 +127,76 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// Botao mostrar mais comunidade
+    function showFullContent(postId) {
+        const post = document.getElementById(postId);
+        const preview = post.querySelector('.preview');
+        const fullContent = post.querySelector('.full-content');
+        const button = post.querySelector('.btnFiltro');
 
+        preview.style.display = 'none';
+        fullContent.style.display = 'block';
 
+        button.style.display = 'none';
+    }
     
+    // Função para adicionar a nova notícia
+    document.getElementById('addNewsForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        // Captura os dados do formulário
+        const title = document.getElementById('newsTitle').value;
+        const author = document.getElementById('newsAuthor').value;
+        const content = document.getElementById('newsContent').value;
+
+        // Cria um novo ID para o post
+        const newPostId = 'post' + (document.querySelectorAll('.post').length + 1);
+
+        // Cria um novo post dinamicamente
+        const postContainer = document.createElement('div');
+        postContainer.classList.add('post');
+        postContainer.id = newPostId;
+
+        postContainer.innerHTML = `
+            <h3>${title}</h3>
+            <p>${author}</p>
+            <p class="preview">${content.substring(0, 100)}...</p>
+            <p class="full-content" style="display: none;">${content}</p>
+            <button class="btnFiltro" onclick="toggleContent('${newPostId}')">Leia Mais</button>
+        `;
+
+        // Adiciona o novo post ao contêiner de posts
+        document.querySelector('.contactComunidade').appendChild(postContainer);
+
+        // Fecha o modal
+        const modal = new bootstrap.Modal(document.getElementById('addNewsModal'));
+        modal.hide();
+
+        // Limpa os campos do formulário
+        document.getElementById('addNewsForm').reset();
+    });
+
+    // Função para mostrar/ocultar o conteúdo completo e esconder o preview
+    function toggleContent(postId) {
+        const post = document.getElementById(postId);
+        const fullContent = post.querySelector('.full-content');
+        const preview = post.querySelector('.preview');
+        const button = post.querySelector('.btnFiltro');
+
+        // Verifica se o conteúdo está oculto e exibe ou oculta o conteúdo
+        if (fullContent.style.display === 'none' || fullContent.style.display === '') {
+            fullContent.style.display = 'block';
+            preview.style.display = 'none'; // Esconde o preview quando mostrar o conteúdo completo
+            button.textContent = 'Leia Menos';
+
+            // Rolagem suave até o conteúdo completo
+            window.scrollTo({
+                top: fullContent.offsetTop - 20, // Ajuste a distância de rolagem se necessário
+                behavior: 'smooth'
+            });
+        } else {
+            fullContent.style.display = 'none';
+            preview.style.display = 'block'; // Mostra o preview novamente
+            button.textContent = 'Leia Mais';
+        }
+    }
