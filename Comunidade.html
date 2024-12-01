@@ -33,7 +33,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="Comunidade">
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -83,97 +83,156 @@
     <!-- Page Header End -->
 
     <div class="contactComunidade">
-        <!-- Exemplo de post já existente -->
         <div class="post" id="post1">
-            <h3>Nova Espécie de Ave Descoberta!</h3>
-            <p>João Silva</p>
-            <p class="preview">Uma nova espécie de ave foi descoberta na floresta amazônica...</p>
+            <h3>O Fascinante Mundo dos Falcões</h3>
+            <p><i class="bi bi-person-circle"></i> Lucas Ferreira</p>
+            <p class="preview">Os falcões são aves de rapina conhecidas por sua velocidade e agilidade. Uma das...</p>
             <p class="full-content" style="display: none;">
-                Uma nova espécie de ave foi descoberta na floresta amazônica. Pesquisadores anunciaram a descoberta de
-                uma nova ave na floresta amazônica. A espécie, batizada de *Amazonae Nova*, possui características
-                únicas e destaca a rica biodiversidade da região. Essa descoberta reforça a importância da preservação
-                das florestas tropicais.
+                Os falcões são aves de rapina conhecidas por sua velocidade e agilidade. Uma das espécies mais rápidas é
+                o falcão-peregrino, que pode atingir velocidades de até 320 km/h em um mergulho. Esses incríveis
+                caçadores utilizam sua visão aguçada para localizar presas a grandes distâncias. Se você tiver a chance
+                de observar um falcão em ação, não perca!
             </p>
-            <button class="btnFiltro" onclick="toggleContent('post1')">Leia Mais</button>
+            <button class="btnFiltro" onclick="toggleContent('post1')">Ler Mais</button>
         </div>
 
         <div class="post" id="post2">
             <h3>Avistamento de Falcão-peregrino</h3>
-            <p>Maria Oliveira</p>
-            <p class="preview">Hoje avistei um falcão-peregrino incrível em uma reserva local!</p>
+            <p><i class="bi bi-person-circle"></i> Maria Oliveira</p>
+            <p class="preview">Hoje avistei um falcão-peregrino incrível em uma reserva local...</p>
             <p class="full-content" style="display: none;">
                 Hoje avistei um falcão-peregrino incrível em uma reserva local! Durante uma caminhada na Reserva
                 Nacional, avistei um falcão-peregrino em pleno voo. Sua velocidade e habilidade são fascinantes.
                 Recomendo que visitem a reserva para testemunhar essas maravilhas da natureza!
             </p>
-            <button class="btnFiltro" onclick="toggleContent('post2')">Leia Mais</button>
+            <button class="btnFiltro" onclick="toggleContent('post2')">Ler Mais</button>
         </div>
-    </div>
 
-    <!-- Botão para abrir o modal -->
-    <div class="text-center my-4">
-        <button class="btnFiltro" data-bs-toggle="modal" data-bs-target="#addNewsModal">Adicionar Notícia</button>
-    </div>
+        <div class="post" id="post3">
+            <h3>Curiosidades sobre Corujas</h3>
+            <p><i class="bi bi-person-circle"></i> Felipe Almeida</p>
+            <p class="preview">As corujas são aves de rapina noturnas fascinantes. Elas têm...</p>
+            <p class="full-content" style="display: none;">
+                As corujas são aves de rapina noturnas fascinantes. Elas têm uma audição excepcional, que lhes permite
+                localizar presas no escuro. Além disso, suas penas são adaptadas para um voo silencioso, tornando-as
+                caçadoras furtivas. Uma curiosidade interessante é que as corujas podem girar a cabeça até 270 graus, o
+                que lhes dá uma visão quase completa do ambiente ao seu redor.
+            </p>
+            <button class="btnFiltro" onclick="toggleContent('post3')">Ler Mais</button>
+        </div>
 
-    <!-- Modal para adicionar uma nova notícia -->
-    <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addNewsModalLabel">Adicionar Nova Notícia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="addNewsForm">
-                        <div class="mb-3">
-                            <label for="newsTitle" class="form-label">Título</label>
-                            <input type="text" class="form-control" id="newsTitle" placeholder="Título da notícia"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newsAuthor" class="form-label">Autor</label>
-                            <input type="text" class="form-control" id="newsAuthor" placeholder="Nome do autor"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newsContent" class="form-label">Texto</label>
-                            <textarea class="form-control" id="newsContent" rows="5" placeholder="Texto da notícia"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btnFilter">Adicionar Notícia</button>
-                    </form>
+        <div class="post" id="post4">
+            <h3>Projetos de Conservação de Aves de Rapina</h3>
+            <p><i class="bi bi-person-circle"></i> Carolina Mendes</p>
+            <p class="preview">Existem vários projetos de conservação dedicados às aves de rapina. Um exemplo...</p>
+            <p class="full-content" style="display: none;">
+                Existem vários projetos de conservação dedicados às aves de rapina. Um exemplo é o Projeto Harpia, que
+                trabalha na preservação do gavião-real, uma das maiores aves de rapina do mundo. Outro projeto
+                importante é o Programa de Reintrodução de Aves de Rapina, que visa reabilitar e reintroduzir aves
+                feridas de volta à natureza. Apoiar esses projetos é essencial para a proteção dessas espécies.
+            </p>
+            <button class="btnFiltro" onclick="toggleContent('post4')">Ler Mais</button>
+        </div>
+
+        <div class="post" id="post5">
+            <h3>A Importância das Aves de Rapina no Ecossistema</h3>
+            <p><i class="bi bi-person-circle"></i> Rafael Lima</p>
+            <p class="preview">As aves de rapina desempenham um papel crucial no equilíbrio dos ecossistemas. Elas
+                ajudam...</p>
+            <p class="full-content" style="display: none;">
+                As aves de rapina desempenham um papel crucial no equilíbrio dos ecossistemas. Elas ajudam a controlar
+                populações de roedores e outras pequenas presas, prevenindo superpopulações que poderiam causar danos às
+                colheitas e transmitir doenças. Além disso, são indicadores de saúde ambiental, já que sua presença
+                indica um ecossistema equilibrado e saudável.
+            </p>
+            <button class="btnFiltro" onclick="toggleContent('post5')">Ler Mais</button>
+        </div>
+
+        <div class="post" id="post6">
+            <h3>Dúvidas Comuns sobre Aves de Rapina</h3>
+            <p><i class="bi bi-person-circle"></i> Pedro Santos - Biólogao</p>
+            <p class="preview">Existem vários projetos de conservação dedicados às aves de rapina. Um exemplo...</p>
+            <p class="full-content" style="display: none;">
+                Recebo muitas perguntas sobre aves de rapina, então decidi responder algumas das mais comuns aqui no
+                blog. Uma dúvida frequente é sobre a diferença entre falcões e gaviões. Basicamente, os falcões são
+                conhecidos por suas velocidades incríveis, enquanto os gaviões têm asas mais largas e são excelentes em
+                manobras aéreas. Se você tiver mais perguntas, deixe nos comentários!
+            </p>
+            <button class="btnFiltro" onclick="toggleContent('post6')">Ler Mais</button>
+        </div>
+
+        <div class="post" id="post7">
+            <h3>Nova Espécie de Ave Descoberta!</h3>
+            <p><i class="bi bi-person-circle"></i> João Silva</p>
+            <p class="preview">Uma nova espécie de ave foi descoberta na floresta amazônica...</p>
+            <p class="full-content" style="display: none;">
+                Uma nova espécie de ave foi descoberta na floresta amazônica. Pesquisadores anunciaram a descoberta de
+                uma nova ave na floresta amazônica. A espécie, batizada de <strong>Amazonae Nova</strong>, possui
+                características
+                únicas e destaca a rica biodiversidade da região. Essa descoberta reforça a importância da preservação
+                das florestas tropicais.
+            </p>
+            <button class="btnFiltro" onclick="toggleContent('post7')">Ler Mais</button>
+        </div>
+
+        <!-- Modal para adicionar uma nova notícia -->
+        <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addNewsModalLabel">Adicionar Novo Post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addNewsForm">
+                            <div class="mb-3">
+                                <label for="newsTitle" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="newsTitle" placeholder="Título do post"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newsAuthor" class="form-label">Autor</label>
+                                <input type="text" class="form-control" id="newsAuthor" placeholder="Seu nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newsContent" class="form-label">Texto</label>
+                                <textarea class="form-control" id="newsContent" rows="5" placeholder="Conteúdo"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btnFiltro">Adicionar Post</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addNewsModalLabel">Adicionar Nova Notícia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="addNewsForm">
-                        <div class="mb-3">
-                            <label for="newsTitle" class="form-label">Título</label>
-                            <input type="text" class="form-control" id="newsTitle" placeholder="Título da notícia"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newsAuthor" class="form-label">Autor</label>
-                            <input type="text" class="form-control" id="newsAuthor" placeholder="Nome do autor"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="newsContent" class="form-label">Texto</label>
-                            <textarea class="form-control" id="newsContent" rows="5" placeholder="Texto da notícia"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btnFilter">Adicionar Notícia</button>
-                    </form>
+        <!-- Modal -->
+        <div class="modal fade" id="addNewsModal" tabindex="-1" aria-labelledby="addNewsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addNewsModalLabel">Adicionar Novo Post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addNewsForm">
+                            <div class="mb-3">
+                                <label for="newsTitle" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="newsTitle" placeholder="Título do post"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newsAuthor" class="form-label">Autor</label>
+                                <input type="text" class="form-control" id="newsAuthor" placeholder="Seu nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="newsContent" class="form-label">Texto</label>
+                                <textarea class="form-control" id="newsContent" rows="5" placeholder="Conteúdo"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btnFiltro">Adicionar Post</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,9 +254,12 @@
     </div>
     <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
+
+    <!-- Botão para abrir o modal -->
+    <div class="text-center my-4 btn rounded-circle addPost">
+        <button class="btnFiltro" data-bs-toggle="modal" data-bs-target="#addNewsModal">+</button>
+    </div>
+
 
 
     <!-- JavaScript Libraries -->
@@ -210,6 +272,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/comunidade.js"></script>
 </body>
 
 </html>
