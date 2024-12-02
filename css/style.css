@@ -792,7 +792,10 @@
 .contentReg {
     padding: 15px;
     text-align: center;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante o alinhamento entre o texto e o botão */
+    height: 100%;
 }
 
 .contentReg h4 {
@@ -846,7 +849,6 @@
 }
 
 /* comunidade */
-
 .Comunidade{
     margin: 0;
     padding: 0;

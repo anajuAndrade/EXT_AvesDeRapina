@@ -83,17 +83,25 @@
 
 function filterElements(categoria) {
     const elements = document.querySelectorAll(".elemento");
+    let encontrou = false;
 
     elements.forEach((element) => {
         if (categoria === "Todos" || element.classList.contains(categoria)) {
-            element.style.display = "flex"; // Torna visível (ajustado para flex se necessário)
+            element.style.display = "flex";
+            encontrou = true; 
         } else {
-            element.style.display = "none"; // Oculta o elemento
+            element.style.display = "none"; 
         }
     });
+
+    // Exibe ou oculta a mensagem de ong não cadastrada
+    const mensagemVazia = document.getElementById("mensagemVazia");
+    if (encontrou) {
+        mensagemVazia.style.display = "none"; 
+    } else {
+        mensagemVazia.style.display = "block"; 
+    }
 }
-
-
 
 filterElements('Todos');
 
