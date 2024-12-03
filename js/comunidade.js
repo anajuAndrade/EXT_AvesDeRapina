@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Cria uma nova postagem
             const postContainer = document.createElement('div');
             postContainer.classList.add('post');
-            postContainer.id = title; // Define o ID do post para poder usar no toggle
+            postContainer.id = title; 
             postContainer.innerHTML = `
                 <h3>${title}</h3>
                 <p><i class="bi bi-person-circle"></i> ${author}</p>

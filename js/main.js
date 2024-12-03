@@ -81,30 +81,6 @@
 
 })(jQuery);
 
-function filterElements(categoria) {
-    const elements = document.querySelectorAll(".elemento");
-    let encontrou = false;
-
-    elements.forEach((element) => {
-        if (categoria === "Todos" || element.classList.contains(categoria)) {
-            element.style.display = "flex";
-            encontrou = true; 
-        } else {
-            element.style.display = "none"; 
-        }
-    });
-
-    // Exibe ou oculta a mensagem de ong não cadastrada
-    const mensagemVazia = document.getElementById("mensagemVazia");
-    if (encontrou) {
-        mensagemVazia.style.display = "none"; 
-    } else {
-        mensagemVazia.style.display = "block"; 
-    }
-}
-
-filterElements('Todos');
-
 // Verifique se o formulário está presente na página antes de adicionar o evento
 document.addEventListener("DOMContentLoaded", () => {
     const voluntarioForm = document.querySelector('.voluntario-form');

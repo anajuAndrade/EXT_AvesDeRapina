@@ -152,10 +152,39 @@
             </div>
           </div>
 
+          <!-- Modal para adicionar uma nova ong -->
+          <div class="modal fade" id="addOng" tabindex="-1" aria-labelledby="addOngLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="addOngLabel">Adicionar Nova Ong</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="addOngForm">
+                    <div class="mb-3">
+                      <label for="nomeOng" class="form-label">Nome da Ong</label>
+                      <input type="text" class="form-control" id="nomeOng" placeholder="Nome da ong" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="contatoOng" class="form-label">Contato Ong</label>
+                      <input type="text" class="form-control" id="contatoOng"
+                        placeholder="Contato da Ong (rede social, site)" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="conteudo" class="form-label">Conteúdo</label>
+                      <textarea class="form-control" id="conteudo" rows="5" placeholder="Diga um pouco sobre a Ong"></textarea>
+                    </div>
+                    <button type="submit" class="btnFiltro">Adicionar Ong</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
         <div id="mensagemVazia" style="display: none; text-align: center; font-size: 18px; color: #555;">
-          Nenhuma ONG cadastrada para essa categoria.
-        </div>
+          Nenhuma ONG cadastrada para essa categoria no momento. Caso conheça alguma você pode cadastrá-la!</div>
       </section>
     </div>
   </div>
@@ -176,8 +205,10 @@
   </div>
   <!-- Footer End -->
 
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+  <!-- Add ONG -->
+  <div class="text-center my-4 btn rounded-circle addPost">
+    <button class="btnFiltro" data-bs-toggle="modal" data-bs-target="#addOng">+</button>
+  </div>
 
   <!-- JavaScript Libraries -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -190,6 +221,7 @@
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
+  <script src="js/filtro.js"></script>
 </body>
 
 </html>
